@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -40,19 +40,20 @@ const Hero = () => {
                         className="w-full h-auto"
                     />
                 </div>
-                
-                
             </Slider>
-            <div className="absolute inset-0 flex justify-center flex-col text-white px-20">
-                <div className="text-wrap">
-                    <h1 className="text-4xl font-bold">
+
+            {/* Content overlay */}
+            <div className="absolute inset-0 flex justify-center flex-col text-white px-6 sm:px-10 md:px-20">
+                <div className="text-wrap text-center sm:text-left">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                         Sell just about <br /> anywhere in the <br /> world
                     </h1>
-                    <p className="text-3xl font-medium my-3">
+                    <p className="text-xl sm:text-2xl md:text-3xl font-medium my-3">
                         Whether you have an online shop or <br /> need to accept payments remotely, we <br /> can help you get paid fast.
                     </p>
                 </div>
-                <div className="flex space-x-7 mt-10">
+
+                <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-7 mt-10">
                     <button className="text-white border border-white font-bold py-2 px-6 rounded-md transition duration-300 hover:bg-white hover:text-black">
                         Sign Up
                     </button>

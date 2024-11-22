@@ -6,10 +6,12 @@ import Phone from "./components/Phone";
 import Numbers from "./components/Numbers";
 import Brand from "./components/Brand";
 import Brand1 from "./components/Brand1";
+// import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <div>
+      {/* <Navbar/> */}
       <Hero/>
       <Banner/>
       <Banner1/>

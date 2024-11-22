@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="75px" viewBox="0 0 75 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Fraud</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fraud">
+            <rect id="Rectangle-3-Copy-3" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="75" height="75"></rect>
+            <g id="Page-1" transform="translate(11.000000, 9.000000)" stroke="#FFC439" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M52.6315,28.8474 C52.6315,28.8474 41.0065,45.0954 26.6665,45.0954 C12.3245,45.0954 0.6995,28.8474 0.6995,28.8474 C0.6995,28.8474 12.3245,12.5994 26.6665,12.5994 C41.0065,12.5994 52.6315,28.8474 52.6315,28.8474 Z" id="Stroke-1"></path>
+                <path d="M26.6667,18.4568 C32.4047,18.4568 37.0577,23.1078 37.0577,28.8468 C37.0577,34.5858 32.4047,39.2378 26.6667,39.2378 C20.9287,39.2378 16.2757,34.5858 16.2757,28.8468 C16.2757,23.1078 20.9287,18.4568 26.6667,18.4568 Z" id="Stroke-3"></path>
+                <path d="M26.6667,25.1736 C28.6957,25.1736 30.3407,26.8186 30.3407,28.8476 C30.3407,30.8766 28.6957,32.5216 26.6667,32.5216 C24.6377,32.5216 22.9927,30.8766 22.9927,28.8476 C22.9927,26.8186 24.6377,25.1736 26.6667,25.1736 Z" id="Stroke-5"></path>
+                <path d="M26.6667,5.1101 L26.6667,0.7001" id="Stroke-7"></path>
+                <path d="M4.3366,15.7058 L0.9366,12.3048" id="Stroke-9"></path>
+                <path d="M14.3542,8.4304 L12.1862,3.9104" id="Stroke-11"></path>
+                <path d="M52.3972,12.3045 L48.9952,15.7045" id="Stroke-13"></path>
+                <path d="M41.1452,3.9109 L38.9772,8.4309" id="Stroke-15"></path>
+                <path d="M26.6667,52.6482 L26.6667,57.0582" id="Stroke-17"></path>
+                <path d="M48.9948,42.0525 L52.3968,45.4535" id="Stroke-19"></path>
+                <path d="M38.9772,49.3289 L41.1452,53.8469" id="Stroke-21"></path>
+                <path d="M0.9343,45.4539 L4.3363,42.0529" id="Stroke-23"></path>
+                <path d="M12.1862,53.8465 L14.3542,49.3265" id="Stroke-25"></path>
+            </g>
+        </g>
+    </g>
+</svg>
