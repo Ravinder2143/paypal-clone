@@ -6,6 +6,11 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Track if the mobile menu is open
+    const [activeDropdown, setActiveDropdown] = useState(null); // To track active dropdown
+
+    const toggleDropdown = (dropdown) => {
+        setActiveDropdown(activeDropdown === dropdown ? null : dropdown); // Toggle dropdown visibility
+    };
 
     return (
         <nav className="bg-white w-full">
@@ -25,111 +30,131 @@ const Navbar = () => {
                 {/* Main Navigation Links */}
                 <div className="hidden sm:flex flex-row space-x-6 text-xl font-bold text-neutral-800">
                     {/* INDIVIDUAL Dropdown */}
-                    <div className="relative group">
-                        <button className="text-xl font-bold text-neutral-800 hover:text-blue-500">
+                    <div className="relative">
+                        <button
+                            onClick={() => toggleDropdown('individual')}
+                            className="text-xl font-bold text-neutral-800 hover:text-blue-500"
+                        >
                             INDIVIDUAL
                         </button>
-                        <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 ease-in-out">
-                            <div className="flex flex-wrap gap-2">
-                                <div className="flex justify-center items-center space-x-4">
-                                    <div>
-                                        <Link href="/shopwithpaypal">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Shop with PayPal
-                                            </button>
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link href="/Buyerprotection">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Buyer Protection
-                                            </button>
-                                        </Link>
+                        {activeDropdown === 'individual' && (
+                            <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 transition-opacity duration-200 ease-in-out">
+                                <div className="flex flex-wrap gap-2">
+                                    <div className="flex justify-center items-center space-x-4">
+                                        <div>
+                                            <Link href="/shopwithpaypal">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Shop with PayPal
+                                                </button>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="/Buyerprotection">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Buyer Protection
+                                                </button>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
 
                     {/* BUSINESS Dropdown */}
-                    <div className="relative group">
-                        <button className="text-xl font-bold text-neutral-800 hover:text-blue-500">
+                    <div className="relative">
+                        <button
+                            onClick={() => toggleDropdown('business')}
+                            className="text-xl font-bold text-neutral-800 hover:text-blue-500"
+                        >
                             BUSINESS
                         </button>
-                        <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 ease-in-out">
-                            <div className="flex flex-wrap gap-2">
-                                <div className="flex justify-center items-center space-x-4">
-                                    <div>
-                                        <Link href="/market">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Marketplaces & Partners
-                                            </button>
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link href="/acceptpayment">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Accept Payments
-                                            </button>
-                                        </Link>
+                        {activeDropdown === 'business' && (
+                            <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 transition-opacity duration-200 ease-in-out">
+                                <div className="flex flex-wrap gap-2">
+                                    <div className="flex justify-center items-center space-x-4">
+                                        <div>
+                                            <Link href="/market">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Marketplaces & Partners
+                                                </button>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="/acceptpayment">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Accept Payments
+                                                </button>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
 
                     {/* PARTNERS Dropdown */}
-                    <div className="relative group">
-                        <button className="text-xl font-bold text-neutral-800 hover:text-blue-500">
+                    <div className="relative">
+                        <button
+                            onClick={() => toggleDropdown('partners')}
+                            className="text-xl font-bold text-neutral-800 hover:text-blue-500"
+                        >
                             PARTNERS
                         </button>
-                        <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 ease-in-out">
-                            <div className="flex flex-wrap gap-2">
-                                <div className="flex justify-center items-center space-x-4">
-                                    <div>
-                                        <Link href="/patnerwithus">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Partner With Us
-                                            </button>
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link href="/patnerdirectory">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Partner Directory
-                                            </button>
-                                        </Link>
+                        {activeDropdown === 'partners' && (
+                            <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 transition-opacity duration-200 ease-in-out">
+                                <div className="flex flex-wrap gap-2">
+                                    <div className="flex justify-center items-center space-x-4">
+                                        <div>
+                                            <Link href="/patnerwithus">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Partner With Us
+                                                </button>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="/patnerdirectory">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Partner Directory
+                                                </button>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
 
                     {/* USEFUL INFO Dropdown */}
-                    <div className="relative group">
-                        <button className="text-xl font-bold text-neutral-800 hover:text-blue-500">
+                    <div className="relative">
+                        <button
+                            onClick={() => toggleDropdown('usefulInfo')}
+                            className="text-xl font-bold text-neutral-800 hover:text-blue-500"
+                        >
                             USEFUL INFO
                         </button>
-                        <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 ease-in-out">
-                            <div className="flex flex-wrap gap-2">
-                                <div className="flex justify-center items-center space-x-4">
-                                    <div>
-                                        <Link href="/compliance">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                PCI Compliance
-                                            </button>
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <Link href="/help">
-                                            <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
-                                                Help Centre
-                                            </button>
-                                        </Link>
+                        {activeDropdown === 'usefulInfo' && (
+                            <div className="absolute w-96 top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg rounded-lg p-4 z-50 transition-opacity duration-200 ease-in-out">
+                                <div className="flex flex-wrap gap-2">
+                                    <div className="flex justify-center items-center space-x-4">
+                                        <div>
+                                            <Link href="/compliance">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    PCI Compliance
+                                                </button>
+                                            </Link>
+                                        </div>
+                                        <div>
+                                            <Link href="/help">
+                                                <button className="w-full py-2 px-4 text-white text-lg font-semibold hover:bg-blue-700 rounded">
+                                                    Help Centre
+                                                </button>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
 
