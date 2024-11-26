@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Brand1 = () => {
     return (
         <div className="bg-blue-900 py-10 space-y-6 px-4">
@@ -15,9 +16,11 @@ const Brand1 = () => {
 
             {/* Button */}
             <div className="flex justify-center items-center py-6">
-                <button className="bg-white text-blue-700 border border-blue-700 font-bold py-2 px-8 sm:px-9 rounded-full transition duration-300 hover:bg-blue-700 hover:text-white w-full sm:w-auto">
-                    Sign Up
-                </button>
+                <Link href="/signup">
+                    <button className="bg-white text-blue-700 border border-blue-700 font-bold py-2 px-8 sm:px-9 rounded-full transition duration-300 hover:bg-blue-700 hover:text-white w-full sm:w-auto">
+                        Sign Up
+                    </button>
+                </Link>
             </div>
         </div>
     );

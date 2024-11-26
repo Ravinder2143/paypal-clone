@@ -1,14 +1,23 @@
+import Link from "next/link";
 const Fotter = () => {
     return (
         <div className="px-4 sm:px-16 py-10"> {/* Padding adjustments for smaller screens */}
             {/* First Section: Navigation Links */}
             <div className="flex flex-col sm:flex-row justify-between items-center border-b-2 border-black-600 py-4">
                 <div className="flex flex-wrap justify-center sm:justify-start space-x-4 text-black font-semibold mb-4 sm:mb-0">
-                    <div><a href="">Home</a></div>
+                    <div>
+                        <Link href="/help">
+                            Help
+                        </Link>
+                    </div>
                     <div><a href="">Contact</a></div>
                     <div><a href="">Fees</a></div>
                     <div><a href="">Security</a></div>
-                    <div><a href="">Shop</a></div>
+                    <div>
+                        <Link href="/shopwithpaypal">
+                            Shop
+                        </Link>
+                    </div>
                 </div>
                 <div className="flex justify-center sm:justify-start">
                     <img src="india-flag.svg" alt="Indian flag" className="w-16 h-auto" />

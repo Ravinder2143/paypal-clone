@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Phone = () => {
     return (
         <div className="bg-blue-900 py-9 space-y-10 relative">
@@ -17,9 +17,11 @@ const Phone = () => {
                     </div>
                 </div>
                 <div>
-                    <button className="text-white border border-white font-bold py-2 px-6 rounded-full transition duration-300 bg-blue-500 text-black hover:bg-blue-600 hover:text-white">
-                        Send an invoice
-                    </button>
+                    <Link href="/acceptpayment">
+                        <button className="text-white border border-white font-bold py-2 px-6 rounded-full transition duration-300 bg-blue-500 text-black hover:bg-blue-600 hover:text-white">
+                            Send an invoice
+                        </button>
+                    </Link>
                 </div>
             </div>
 

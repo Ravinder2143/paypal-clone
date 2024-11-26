@@ -1,11 +1,11 @@
 import React from "react";
-// import Image from "next/image";
+
 const Signup = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 z-50">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
+      <div className="w-full max-w-lg bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Sign Up</h2>
-        
+
         <form className="space-y-4">
           {/* Name */}
           <div>

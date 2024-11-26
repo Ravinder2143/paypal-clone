@@ -3,7 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Link from "next/link";
 const Hero = () => {
     // Slider settings
     const settings = {
@@ -54,12 +54,14 @@ const Hero = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-7 mt-10">
-                    <button className="text-white border border-white font-bold py-2 px-6 rounded-md transition duration-300 hover:bg-white hover:text-black">
-                        Sign Up
-                    </button>
-                    <button className="text-white border border-white font-bold py-2 px-6 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                    <Link href="/signup">
+                        <button className="text-white border border-white font-bold py-2 px-6 rounded-md transition duration-300 hover:bg-white hover:text-black">
+                            Sign Up
+                        </button>
+                    </Link>
+                    {/* <button className="text-white border border-white font-bold py-2 px-6 rounded-md transition duration-300 hover:bg-white hover:text-black">
                         Contact Us
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>
