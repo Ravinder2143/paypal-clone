@@ -154,7 +154,7 @@ const patner = () => {
                             <li>PayPal buttons: Use PayPal’s buttons for your social media or messaging apps to collect payments.</li>
                         </ul>
                         <p className="text-lg text-gray-700">
-                            Learn more about these options on PayPal's website.
+                            Learn more about these options on PayPal&aposs website.
                         </p>
                     </div>
 
@@ -166,7 +166,7 @@ const patner = () => {
                         What type of businesses can use PayPal for accepting payments?
                     </p>
                     <p className="text-lg text-gray-700">
-                        PayPal provides payment solutions for businesses of all sizes, whether you're a small startup, a freelancer, or a large enterprise. Some examples of businesses that can use PayPal include:
+                        PayPal provides payment solutions for businesses of all sizes, whether your&apos;s a small startup, a freelancer, or a large enterprise. Some examples of businesses that can use PayPal include:
                     </p>
                     <ul className="list-disc pl-6 text-gray-700">
                         <li>E-commerce businesses: Sell products directly online with seamless checkout options.</li>

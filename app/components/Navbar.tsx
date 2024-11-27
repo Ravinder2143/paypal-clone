@@ -6,9 +6,10 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Track if the mobile menu is open
-    const [activeDropdown, setActiveDropdown] = useState(null); // To track active dropdown
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null); // To track active dropdown
 
-    const toggleDropdown = (dropdown) => {
+    // Toggle dropdown visibility
+    const toggleDropdown = (dropdown: string) => {
         setActiveDropdown(activeDropdown === dropdown ? null : dropdown); // Toggle dropdown visibility
     };
 
